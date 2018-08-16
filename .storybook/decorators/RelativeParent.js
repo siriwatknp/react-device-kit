@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const withRelativeParent = (style) => storyFn => {
   return (
@@ -6,10 +6,10 @@ export const withRelativeParent = (style) => storyFn => {
       className={'with-relative-parent'}
       style={{
         position: 'relative',
-        ...style,
+        ...style
       }}
     >
       {storyFn()}
     </div>
   );
-}
+};
