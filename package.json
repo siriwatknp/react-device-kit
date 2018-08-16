@@ -3,7 +3,7 @@
   "description": "Collection of devices written in React",
   "author": "siriwatknp",
   "user": "siriwatknp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "start": "catalog start docs",
     "test": "jest --env=node --colors",
