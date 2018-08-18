@@ -1,9 +1,9 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { cx } from 'react-emotion';
+import { cx } from 'react-emotion';
 
-const IphoneX = styled(({ children, className }) => {
+const IPhoneX = ({ children, className }) => {
   return (
     <div className={cx('react-device-kit', className)}>
       <div className="marvel-device iphone-x">
@@ -28,26 +28,15 @@ const IphoneX = styled(({ children, className }) => {
       </div>
     </div>
   );
-})({
-  '.marvel-device, .marvel-device div, :before, :after': {
-    transition: 'all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-  },
-  '.screen': {
-    position: 'relative',
-    '.lock-screen-notification': {
-      position: 'absolute',
-      left: 8,
-      right: 8,
-      top: 205
-    }
-  }
-});
-
-IphoneX.propTypes = {
-  children: PropTypes.node
-};
-IphoneX.defaultProps = {
-  children: null
 };
 
-export default IphoneX;
+IPhoneX.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
+};
+IPhoneX.defaultProps = {
+  children: null,
+  className: ''
+};
+
+export default IPhoneX;

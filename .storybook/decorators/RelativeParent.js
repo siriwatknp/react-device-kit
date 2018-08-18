@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const withRelativeParent = (style) => storyFn => {
+export const withRelativeParent = (style) => storyFn => (context) => {
   return (
     <div
       className={'with-relative-parent'}
@@ -9,7 +9,7 @@ export const withRelativeParent = (style) => storyFn => {
         ...style
       }}
     >
-      {storyFn()}
+      {storyFn(context)}
     </div>
   );
 };
